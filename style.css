@@ -25,8 +25,40 @@ body { font-family: 'Cairo', sans-serif; background-color: var(--dark-black); co
 }
 
 /* About */
+/* تنسيق صورة الكاتب في سكشن About */
+/* تنسيق صورة الكاتب المستطيلة في سكشن About */
+.about-img-container {
+    position: relative;
+    display: inline-block;
+}
+
+.about-profile-img {
+    width: 280px;         /* عرض الصورة */
+    height: 380px;        /* جعل الطول أكبر من العرض لتبدو مستطيلة (Portrait) */
+    object-fit: cover;    /* يضمن عدم تمدد الصورة مهما كانت أبعاد الأصل */
+    border-radius: 10px;  /* انحناء بسيط جداً للزوايا بدلاً من الدائرة */
+    border: 3px solid var(--primary-yellow); /* إطار أصفر نحيف وأنيق */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* ظل سفلي ليعطي عمق للصورة */
+    transition: all 0.4s ease;
+}
+
+.about-profile-img:hover {
+    transform: translateY(-10px); /* ترتفع للأعلى قليلاً عند التمرير */
+    box-shadow: 0 15px 40px rgba(255, 215, 0, 0.3); /* توهج أصفر عند التمرير */
+    border-color: #fff; /* يتغير الإطار للأبيض */
+}
+
+/* تعديل النص ليتناسب مع الصورة المستطيلة */
+.about-text {
+    line-height: 1.9;
+    font-size: 1.15rem;
+    color: #e0e0e0;
+    text-align: justify;
+    text-align-last: center;
+    margin-top: 20px; /* مسافة بين الصورة والنص */
+}
 .bg-soft-black { background-color: var(--soft-black); }
-.about-text { font-size: 1.2rem; line-height: 2; color: #ccc; }
+
 
 /* Guinness Section */
 .guinness-section .bg-warning { transition: transform 0.3s; }
